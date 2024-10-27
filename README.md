@@ -59,3 +59,13 @@ This `production.py` settings file is configured for a secure and scalable produ
    - Enforces best practices by including validators for length, complexity, and similarity checks to maintain password security.
 
 This setup is ready for deployment in a production environment. Ensure all required environment variables are set before starting the application to avoid configuration errors.
+
+# Admin Credentials
+
+- To access the admin panel, you can create a new admin user through the terminal. Use the following command:
+
+    ```bash
+    python manage.py createsuperuser
+    ```
+
+- Follow the prompts to set a username, email, and password for the new admin user. Once created, use these credentials to log in to the admin panel.
