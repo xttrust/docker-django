@@ -69,3 +69,41 @@ This setup is ready for deployment in a production environment. Ensure all requi
     ```
 
 - Follow the prompts to set a username, email, and password for the new admin user. Once created, use these credentials to log in to the admin panel.
+
+
+## Running the Docker Container
+
+To run the Django application within a Docker container, follow these steps:
+
+1. **Build the Docker Image**:
+   - Navigate to the directory containing the `Dockerfile` and run the following command to build the Docker image:
+   
+    ```bash
+    docker build -t django_app .
+    ```
+
+   - This command creates a Docker image named `django_app` (you can replace `django_app` with any preferred name).
+
+2. **Run the Docker Container**:
+   - Start a container from the image and map it to port `8080` (or any preferred port) on your local machine:
+
+    ```bash
+    docker run -p 8080:8080 django_app
+    ```
+
+   - Here, `-p 8080:8080` binds port `8080` in the container to port `8080` on the host machine. You can access the Django server at `http://localhost:8080`.
+
+3. **Stopping the Container**:
+   - To stop the container, find the container ID by running:
+
+    ```bash
+    docker ps
+    ```
+
+   - Then, stop the container with:
+
+    ```bash
+    docker stop <container_id>
+    ```
+
+Following these steps will allow you to build and run your Django application in a Docker container successfully.
